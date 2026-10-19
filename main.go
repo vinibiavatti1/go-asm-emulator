@@ -9,6 +9,8 @@ import (
 )
 
 var src = flag.String("src", "", "ASM source code path")
+var memSize = flag.Int("memory", 8, "Memory size")
+var stackSize = flag.Int("stack", 8, "Stack size")
 
 func init() {
 	flag.Parse()
@@ -26,7 +28,7 @@ func main() {
 		panic(err)
 	}
 
-	machine := machine.NewMachine(10, 10)
+	machine := machine.NewMachine(*memSize, *stackSize)
 	interpreter := instruction.NewInterpreter(machine)
 	err = interpreter.CompileAndRun(string(code))
 	if err != nil {
