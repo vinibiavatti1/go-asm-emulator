@@ -35,6 +35,6 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Printf("ASM (%s) result:\n", path)
+	fmt.Printf("Result (%s):\n", path)
 	machine.PrintState()
 }

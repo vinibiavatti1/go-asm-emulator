@@ -54,7 +54,8 @@ func (m *Machine) IncInstructionPtr() { m.IP().Inc() }
 func (m *Machine) Memory() *Memory    { return m.memory }
 func (m *Machine) Stack() *Stack      { return m.stack }
 func (m *Machine) PrintState() {
-	fmt.Println("Registers:")
+	fmt.Println()
+	fmt.Println("Registers")
 	fmt.Printf("rax.......: %s (%d)\n", toHexRepr(m.rax.value), m.rax.value)
 	fmt.Printf("rbx.......: %s (%d)\n", toHexRepr(m.rbx.value), m.rbx.value)
 	fmt.Printf("rcx.......: %s (%d)\n", toHexRepr(m.rcx.value), m.rcx.value)
@@ -64,13 +65,13 @@ func (m *Machine) PrintState() {
 	fmt.Printf("rsp.......: %s (%d)\n", toHexRepr(m.rsp.value), m.rsp.value)
 	fmt.Printf("rbp.......: %s (%d)\n", toHexRepr(m.rbp.value), m.rbp.value)
 	fmt.Printf("eflags....: %s (%d)\n", toHexRepr(m.eflags.value), m.eflags.value)
-
-	fmt.Printf("Memory (%d):\n", len(m.memory.data))
+	fmt.Println()
+	fmt.Printf("Memory (%d)\n", len(m.memory.data))
 	for address, value := range m.memory.data {
 		fmt.Printf("%s: %s (%d)\n", toHexRepr(address), toHexRepr(value), value)
 	}
-
-	fmt.Printf("Stack  (%d):\n", len(m.stack.data))
+	fmt.Println()
+	fmt.Printf("Stack (%d)\n", len(m.stack.data))
 	for address, value := range m.stack.data {
 		fmt.Printf("%s: %s (%d)\n", toHexRepr(address), toHexRepr(value), value)
 	}
