@@ -5,7 +5,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/vinibiavatti1/goasmemulator/machine"
+	"github.com/vinibiavatti1/go-asm-emulator/machine"
 )
 
 type Interpreter struct {

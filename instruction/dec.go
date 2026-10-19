@@ -3,7 +3,7 @@ package instruction
 import (
 	"fmt"
 
-	"github.com/vinibiavatti1/goasmemulator/machine"
+	"github.com/vinibiavatti1/go-asm-emulator/machine"
 )
 
 func Dec(machine *machine.Machine, interpreter *Interpreter, instruction *Instruction) error {

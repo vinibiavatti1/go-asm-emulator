@@ -3,7 +3,7 @@ package instruction
 import (
 	"fmt"
 
-	"github.com/vinibiavatti1/goasmemulator/machine"
+	"github.com/vinibiavatti1/go-asm-emulator/machine"
 )
 
 type InstructionEvaluator func(*machine.Machine, *Interpreter, *Instruction) error

@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/vinibiavatti1/goasmemulator/machine"
+	"github.com/vinibiavatti1/go-asm-emulator/machine"
 )
 
 func IsRegister(machine *machine.Machine, registerName string) (ok bool) {

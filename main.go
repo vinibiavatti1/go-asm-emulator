@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/vinibiavatti1/goasmemulator/instruction"
-	"github.com/vinibiavatti1/goasmemulator/machine"
+	"github.com/vinibiavatti1/go-asm-emulator/instruction"
+	"github.com/vinibiavatti1/go-asm-emulator/machine"
 )
 
 var src = flag.String("src", "", "ASM source code path")
