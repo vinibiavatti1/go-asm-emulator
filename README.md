@@ -21,11 +21,11 @@ Clone the repository, compile the binary, and run your Assembly files using the 
 git clone https://github.com/vinibiavatti1/go-asm-emulator.git
 cd go-asm-emulator
 
-# Run with default stack (10) and memory (10) sizes
+# Run with default stack (8) and memory (8) sizes
 ./go-asm-emulator.exe -src ./asm/fibonacci.asm
 
 # Run with custom stack and memory allocations
-./go-asm-emulator.exe -src ./asm/fibonacci.asm -memory 5 -stack 5
+./go-asm-emulator.exe -src ./asm/fibonacci.asm -memory 16 -stack 16
 ```
 
 ## Example Usage
