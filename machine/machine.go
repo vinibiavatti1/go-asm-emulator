@@ -65,12 +65,12 @@ func (m *Machine) PrintState() {
 	fmt.Printf("rbp.......: %s (%d)\n", toHexRepr(m.rbp.value), m.rbp.value)
 	fmt.Printf("eflags....: %s (%d)\n", toHexRepr(m.eflags.value), m.eflags.value)
 
-	fmt.Printf("Memory: (%d)\n", len(m.memory.data))
+	fmt.Printf("Memory (%d):\n", len(m.memory.data))
 	for address, value := range m.memory.data {
 		fmt.Printf("%s: %s (%d)\n", toHexRepr(address), toHexRepr(value), value)
 	}
 
-	fmt.Printf("Stack: (%d)\n", len(m.stack.data))
+	fmt.Printf("Stack (%d):\n", len(m.stack.data))
 	for address, value := range m.stack.data {
 		fmt.Printf("%s: %s (%d)\n", toHexRepr(address), toHexRepr(value), value)
 	}
