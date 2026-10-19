@@ -18,7 +18,7 @@ A lightweight, modular x86-inspired Assembly emulator built from scratch in Go, 
 Clone the repository, compile the binary, and run your Assembly files using the `-src` flag:
 
 ```bash
-git clone [https://github.com/vinibiavatti1/go-asm-emulator.git](https://github.com/vinibiavatti1/go-asm-emulator.git)
+git clone https://github.com/vinibiavatti1/go-asm-emulator.git
 cd go-asm-emulator
 ./go-asm-emulator.exe -src ./asm/fibonacci.asm
 ```
