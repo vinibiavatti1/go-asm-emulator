@@ -45,8 +45,8 @@ fib_loop:
           dec rcx
           jmp fib_loop
 end:
-          mov rdi, 1
-          mov [rdi], rax       ; Stores the final result into Memory[1]
+          mov rdi, 0
+          mov [rdi], rax       ; Stores the final result into Memory[0]
 ```
 
 ## License
