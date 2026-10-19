@@ -2,7 +2,8 @@ package instruction
 
 import (
 	"fmt"
-	"vinibiavatti1/goasmemulator/machine"
+
+	"github.com/vinibiavatti1/goasmemulator/machine"
 )
 
 func Neg(machine *machine.Machine, interpreter *Interpreter, instruction *Instruction) error {

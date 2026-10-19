@@ -3,7 +3,8 @@ package instruction
 import (
 	"strconv"
 	"strings"
-	"vinibiavatti1/goasmemulator/machine"
+
+	"github.com/vinibiavatti1/goasmemulator/machine"
 )
 
 func IsRegister(machine *machine.Machine, registerName string) (ok bool) {

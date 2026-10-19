@@ -4,8 +4,9 @@ import (
 	"flag"
 	"fmt"
 	"os"
-	"vinibiavatti1/goasmemulator/instruction"
-	"vinibiavatti1/goasmemulator/machine"
+
+	"github.com/vinibiavatti1/goasmemulator/instruction"
+	"github.com/vinibiavatti1/goasmemulator/machine"
 )
 
 var src = flag.String("src", "", "ASM source code path")

@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"slices"
 	"strings"
-	"vinibiavatti1/goasmemulator/machine"
+
+	"github.com/vinibiavatti1/goasmemulator/machine"
 )
 
 type Interpreter struct {

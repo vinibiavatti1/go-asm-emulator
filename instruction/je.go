@@ -1,6 +1,6 @@
 package instruction
 
-import "vinibiavatti1/goasmemulator/machine"
+import "github.com/vinibiavatti1/goasmemulator/machine"
 
 func Je(machine *machine.Machine, interpreter *Interpreter, instruction *Instruction) error {
 	label := instruction.Arg1
