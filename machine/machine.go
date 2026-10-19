@@ -70,7 +70,7 @@ func (m *Machine) PrintState() {
 		fmt.Printf("%s: %s (%d)\n", toHexRepr(address), toHexRepr(value), value)
 	}
 
-	fmt.Printf("Stack (%d):\n", len(m.stack.data))
+	fmt.Printf("Stack  (%d):\n", len(m.stack.data))
 	for address, value := range m.stack.data {
 		fmt.Printf("%s: %s (%d)\n", toHexRepr(address), toHexRepr(value), value)
 	}
