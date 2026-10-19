@@ -55,24 +55,24 @@ func (m *Machine) Memory() *Memory    { return m.memory }
 func (m *Machine) Stack() *Stack      { return m.stack }
 func (m *Machine) PrintState() {
 	fmt.Println("Registers:")
-	fmt.Printf("rax: %s\n", toHexRepr(m.rax.value))
-	fmt.Printf("rbx: %s\n", toHexRepr(m.rbx.value))
-	fmt.Printf("rcx: %s\n", toHexRepr(m.rcx.value))
-	fmt.Printf("rdx: %s\n", toHexRepr(m.rdx.value))
-	fmt.Printf("rsi: %s\n", toHexRepr(m.rsi.value))
-	fmt.Printf("rdi: %s\n", toHexRepr(m.rdi.value))
-	fmt.Printf("rsp: %s\n", toHexRepr(m.rsp.value))
-	fmt.Printf("rbp: %s\n", toHexRepr(m.rbp.value))
-	fmt.Printf("eflags: %s\n", toHexRepr(m.eflags.value))
+	fmt.Printf("rax.......: %s (%d)\n", toHexRepr(m.rax.value), m.rax.value)
+	fmt.Printf("rbx.......: %s (%d)\n", toHexRepr(m.rbx.value), m.rbx.value)
+	fmt.Printf("rcx.......: %s (%d)\n", toHexRepr(m.rcx.value), m.rcx.value)
+	fmt.Printf("rdx.......: %s (%d)\n", toHexRepr(m.rdx.value), m.rdx.value)
+	fmt.Printf("rsi.......: %s (%d)\n", toHexRepr(m.rsi.value), m.rsi.value)
+	fmt.Printf("rdi.......: %s (%d)\n", toHexRepr(m.rdi.value), m.rdi.value)
+	fmt.Printf("rsp.......: %s (%d)\n", toHexRepr(m.rsp.value), m.rsp.value)
+	fmt.Printf("rbp.......: %s (%d)\n", toHexRepr(m.rbp.value), m.rbp.value)
+	fmt.Printf("eflags....: %s (%d)\n", toHexRepr(m.eflags.value), m.eflags.value)
 
 	fmt.Println("Memory:")
 	for address, value := range m.memory.data {
-		fmt.Printf("%s: %s\n", toHexRepr(address), toHexRepr(value))
+		fmt.Printf("%s: %s (%d)\n", toHexRepr(address), toHexRepr(value), value)
 	}
 
 	fmt.Println("Stack:")
 	for address, value := range m.stack.data {
-		fmt.Printf("%s: %s\n", toHexRepr(address), toHexRepr(value))
+		fmt.Printf("%s: %s (%d)\n", toHexRepr(address), toHexRepr(value), value)
 	}
 }
 func (m *Machine) Register(name string) (*Register, bool) {
